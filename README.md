@@ -6,7 +6,12 @@ This is the hardware implementation for my ESP8266-MQTT-battery-monitor project.
 
 **Features:**
 
-This board contains an ESP12 module, DC-DC converter and an INA226 DC voltage and current monitor
+This board contains an ESP12 module, a Texas Instruments LMR12010X DC-DC converter and an Texas Instruments INA226 DC voltage and current monitor.
+The board can be powered from any voltage from 5.5V to 16V. It is optimized to work with 12V lead acid batteries. There is transient protection
+on the power input, and voltage and current inputs. There is a 1/2 amp PTC fuse on the power input.
+
+A wide range of current shunts can be used on the differential current inputs, and the shunt
+current and full scale millivolt values are programmable in the firmware. The current value is and integer, and will be negative if the battery is being discharged.
 
 **EDA Software**
 
@@ -18,9 +23,7 @@ This board was designed using KICAD.
 
 **Firmware**
 
-The firmware for this project can be found here:
-
-https://github.com/hwstar/ESP8266-MQTT-battery-monitor-fw
+The firmware for this project can be found [here](https://github.com/hwstar/ESP8266-MQTT-battery-monitor-fw)
 
 
 **LICENSE**
